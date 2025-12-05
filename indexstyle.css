@@ -1,35 +1,63 @@
+
+ @font-face {
+    font-family: DM Sans;
+    src: url(https://fonts.google.com/specimen/DM+Sans);
+}
+
 .parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    gap: 8px;
+    gap: 10px;
+    font-family: DM Sans;
+    flex-wrap: wrap;
 }
 
 .top_left {
     grid-row: span 3 / span 3;
+    background-color:hsl(31, 66%, 93%);
+    border-radius: 15px;
+    width: 200px;
+    height: 400px;
+    font-family: DM Sans;
+    
 }
 
 .top_center {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
+    background-color: hsl(256, 67%, 59%);
+    border-radius: 15px;
+    width: 560px;
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    text-spacing-trim: 50px;
+
 }
 
 .bottom_left {
     grid-row: span 3 / span 3;
     grid-column-start: 1;
     grid-row-start: 4;
+    background-color:hsl(39, 100%, 71%) ;
+    border-radius: 15px;
 }
 
 .far_right {
     grid-row: span 4 / span 4;
     grid-column-start: 4;
     grid-row-start: 1;
+    background-color: hsl(254, 88%, 90%);
+    border-radius: 15px;
 }
 
 .bottom_middle {
     grid-row: span 2 / span 2;
     grid-column-start: 2;
     grid-row-start: 3;
+    background-color: hsl(31, 66%, 93%);
+    border-radius: 15px;
 }
 
 .bottom_right {
@@ -37,16 +65,22 @@
     grid-row: span 2 / span 2;
     grid-column-start: 3;
     grid-row-start: 5;
+    background-color: hsl(256, 67%, 59%);
+    border-radius: 15px;
 }
 
 .middle {
     grid-row: span 2 / span 2;
     grid-column-start: 3;
     grid-row-start: 3;
+    background-color:hsl(39, 100%, 71%) ;
+    border-radius: 15px;
 }
 
-.div12 {
+.left_bottom{
     grid-row: span 2 / span 2;
     grid-column-start: 2;
     grid-row-start: 5;
+    background-color:hsl(31, 66%, 93%);
+    border-radius:15px;
 }
