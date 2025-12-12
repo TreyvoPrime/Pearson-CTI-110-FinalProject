@@ -1,15 +1,19 @@
-
- @font-face {
-    font-family: DM Sans;
-    src: url(https://fonts.google.com/specimen/DM+Sans);
+@font-face {
+    font-family: "DM Sans";
+    src: url("./fonts/DMSans-Regular.ttf") format("truetype");
+    font-weight: 400;
 }
 
+body {
+    background-color: rgba(245, 245, 245);
+    font-family: "DM Sans", sans-serif;
+}
 .parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
     gap: 10px;
-    font-family: DM Sans;
+    font-family: "DM Sans";
     
 }
 
@@ -19,8 +23,9 @@
     border-radius: 15px;
     font-family: DM Sans;
     color: black;
-    font-size: 50px;
+    font-size: 80px;
     text-align: center;
+    font-family: "DM Sans";
  
 }
 .top_center {
@@ -32,6 +37,7 @@
     text-align: center;
     font-size: 90px;
     line-height: 1;
+    font-family: "DM Sans";
  
 }
 
@@ -44,7 +50,15 @@
     font-size: 50px;
     font-weight: bold;
     color: black;
-   
+    margin: 0 auto 5px auto;
+    text-align: center;
+    padding: 20px;
+}
+.bottom_left img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 15px auto 0 auto
 }
 
 .far_right {
@@ -54,8 +68,16 @@
     background-color: hsl(254, 88%, 90%);
     border-radius: 15px;
     font-size: 40px;
-
+    text-align: center;
+    padding: 20px;
 }
+.far_right img {
+    width: 100%;    
+    max-width: 300px;
+    margin: 10px auto;
+    display: block;
+}
+
 
 .bottom_middle {
     grid-row: span 2 / span 2;
@@ -64,7 +86,7 @@
     background-color: hsl(31, 66%, 93%);
     border-radius: 15px;
     font-size: 50px;
- 
+    background-color: white; 
 }
 
 .bottom_right {
@@ -76,7 +98,15 @@
     border-radius: 15px;
     color: white;
     font-size: 60px;
+    text-align: center;
+    padding: 20px;
 
+}
+.bottom_right img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto 5px auto;
 }
 
 .middle {
@@ -85,10 +115,12 @@
     grid-row-start: 3;
     background-color:hsl(39, 100%, 71%) ;
     border-radius: 15px;
-    font-size: 40px;
-
+    font-size: 60px;
 }
-
+.middle img {
+    display: block;
+    margin: 0 auto;
+}
 .left_bottom{
     grid-row: span 2 / span 2;
     grid-column-start: 2;
@@ -96,10 +128,13 @@
     background-color:hsl(31, 66%, 93%);
     border-radius:15px;
     font-size: 80px;
-}
-.small_text {
     text-align: center;
-    font-size: xx-small;
+    background-color: white;
+}
+.far_right .small_text {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
 }
 .normal_text {
     text-align: center;
@@ -107,4 +142,29 @@
 }
 .litte_right_text {
     font-size: small;
+}
+@media (max-width: 900px) {
+    .parent {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .parent >div {
+        flex: 1 1 100%;
+        width: 100%;
+        box-sizing: border-box;
+
+        grid-column: auto;
+        grid-row: auto;
+        grid-column-start: auto;
+        grid-column-end: auto;
+        grid-row-start: auto;
+        grid-row-end: auto;
+    }
+
+    .parent img {
+        max-width: 100%;
+        height: auto;
+    }
 }
